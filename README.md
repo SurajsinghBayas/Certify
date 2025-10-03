@@ -14,6 +14,7 @@ A modern, secure platform for issuing, managing, and verifying certificates usin
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React 18
 - React Router for navigation
 - Axios for API calls
@@ -22,6 +23,7 @@ A modern, secure platform for issuing, managing, and verifying certificates usin
 - Custom CSS for styling
 
 ### Backend
+
 - Node.js with Express
 - SQLite database
 - ethers.js for blockchain interaction
@@ -29,22 +31,26 @@ A modern, secure platform for issuing, managing, and verifying certificates usin
 - QRCode for QR code generation
 
 ### Blockchain
+
 - Polygon Mumbai Testnet
 - Ethereum-compatible smart contracts
 
 ## 📦 Installation
 
 1. **Clone the repository**
+
    ```bash
    cd Certify
    ```
 
 2. **Install root dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Install server dependencies**
+
    ```bash
    cd server
    npm install
@@ -52,6 +58,7 @@ A modern, secure platform for issuing, managing, and verifying certificates usin
    ```
 
 4. **Install client dependencies**
+
    ```bash
    cd client
    npm install
@@ -59,12 +66,14 @@ A modern, secure platform for issuing, managing, and verifying certificates usin
    ```
 
 5. **Configure environment variables**
+
    ```bash
    cd server
    cp .env.example .env
    ```
-   
+
    Edit `.env` and add your:
+
    - Polygon Mumbai RPC URL (or use local Ganache)
    - Private key for blockchain transactions
    - Contract address (after deployment)
@@ -72,22 +81,26 @@ A modern, secure platform for issuing, managing, and verifying certificates usin
 ## 🚀 Running the Application
 
 ### Development Mode (Both servers simultaneously)
+
 ```bash
 npm run dev
 ```
 
 This will start:
+
 - Backend server on http://localhost:5000
 - Frontend server on http://localhost:3000
 
 ### Or run separately:
 
 **Backend only:**
+
 ```bash
 npm run server
 ```
 
 **Frontend only:**
+
 ```bash
 npm run client
 ```
@@ -95,6 +108,7 @@ npm run client
 ## 📱 Using the Platform
 
 ### Issue a Certificate
+
 1. Navigate to `/issue`
 2. Fill in learner details, course name, institute name, and date
 3. Click "Issue Certificate"
@@ -102,11 +116,13 @@ npm run client
 5. Share the QR code or certificate ID with the learner
 
 ### Verify a Certificate
+
 1. Navigate to `/verify`
 2. Enter the certificate ID or scan the QR code
 3. View instant verification results from the blockchain
 
 ### Dashboard
+
 1. Navigate to `/dashboard`
 2. View all issued certificates
 3. Search and filter certificates
@@ -143,11 +159,13 @@ Certify/
 ## 🌐 API Endpoints
 
 ### Certificates
+
 - `POST /api/certificates/issue` - Issue a new certificate
 - `GET /api/certificates/:id` - Get certificate by ID
 - `GET /api/certificates` - Get all certificates
 
 ### Verification
+
 - `GET /api/verify/:id` - Verify certificate by ID
 - `POST /api/verify/hash` - Verify by certificate hash
 
@@ -168,6 +186,7 @@ For production use with Polygon Mumbai:
 3. Add contract address to `.env`
 
 For local development:
+
 - Use Ganache for local blockchain
 - Update RPC URL in `.env` to `http://127.0.0.1:8545`
 

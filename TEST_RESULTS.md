@@ -29,6 +29,7 @@ Congratulations! Your Pinata IPFS integration is now active and ready to use.
 ### 2. Check the Response
 
 You should see:
+
 ```json
 {
   "success": true,
@@ -55,6 +56,7 @@ You should see:
 ### 4. Test IPFS Access
 
 Copy the `ipfsUrl` from the response and:
+
 - Open it in a new browser tab
 - Your certificate PDF should download from IPFS!
 - Try the `publicIpfsUrl` too (works on any IPFS gateway)
@@ -86,18 +88,23 @@ Copy the `ipfsUrl` from the response and:
 ## 📱 Next Steps:
 
 ### 1. Update Frontend (Optional)
+
 Show IPFS links in the UI:
+
 - Display "View on IPFS" button
 - Show IPFS hash in certificate details
 - Add "Download from IPFS" option
 
 ### 2. Set Up Blockchain (Recommended)
+
 Follow `BLOCKCHAIN_SETUP.md` to:
+
 - Deploy smart contract to Polygon Mumbai
 - Store IPFS hashes on blockchain
 - Enable true decentralized verification
 
 ### 3. Test End-to-End
+
 - Issue certificate
 - View on IPFS
 - Verify on blockchain
@@ -109,16 +116,20 @@ Follow `BLOCKCHAIN_SETUP.md` to:
 ## 🔍 Monitoring:
 
 ### Check Pinata Dashboard:
+
 https://app.pinata.cloud/pinmanager
 
 **You'll see:**
+
 - All uploaded files
 - Storage used
 - Bandwidth used
 - File metadata
 
 ### Check Server Logs:
+
 Look for these messages:
+
 ```
 ✅ File uploaded to IPFS: QmXoy...
 ✅ JSON uploaded to IPFS: QmAbc...
@@ -139,17 +150,20 @@ Look for these messages:
 ## 🆘 Troubleshooting:
 
 ### If IPFS upload fails:
+
 - Check server logs for errors
 - Verify Pinata API keys in `.env`
 - Check internet connection
 - Verify Pinata account is active
 
 ### If can't access IPFS URL:
+
 - Wait 1-2 minutes for propagation
 - Try different gateway (ipfs.io, cloudflare-ipfs.com)
 - Check if file exists on Pinata dashboard
 
 ### If seeing "mock" responses:
+
 - Verify `.env` file has Pinata keys
 - Restart server after adding keys
 - Check for typos in keys
@@ -191,6 +205,7 @@ You're well within limits for MVP testing!
 **Your decentralized certificate platform is live!** 🌐
 
 Need help? Check:
+
 - `PINATA_SETUP.md` - Detailed Pinata guide
 - `BLOCKCHAIN_SETUP.md` - Blockchain integration
 - `QUICKSTART.md` - Quick start guide

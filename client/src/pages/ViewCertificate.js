@@ -12,10 +12,6 @@ const ViewCertificate = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchCertificate();
-  }, [id]);
-
   const fetchCertificate = async () => {
     try {
       const response = await axios.get(`/api/certificates/${id}`);
@@ -26,6 +22,11 @@ const ViewCertificate = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchCertificate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
 
   const shareLink = () => {
     const url = window.location.href;

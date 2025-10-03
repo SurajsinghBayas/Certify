@@ -7,15 +7,15 @@
 
 ## 🎯 Component Status
 
-| Component | Status | Details |
-|-----------|--------|---------|
-| Backend Server | ✅ Running | Port 5001 |
-| Database | ✅ Working | SQLite with IPFS columns |
-| PDF Generation | ✅ Working | 5.6KB PDFs created |
-| IPFS Upload | ✅ Working | Pinata integration active |
-| QR Code | ✅ Working | Generated successfully |
-| Blockchain | ⚠️ Mock Mode | Ready for Mumbai testnet |
-| Frontend | 🟡 Not Started | Needs to be started |
+| Component      | Status         | Details                   |
+| -------------- | -------------- | ------------------------- |
+| Backend Server | ✅ Running     | Port 5001                 |
+| Database       | ✅ Working     | SQLite with IPFS columns  |
+| PDF Generation | ✅ Working     | 5.6KB PDFs created        |
+| IPFS Upload    | ✅ Working     | Pinata integration active |
+| QR Code        | ✅ Working     | Generated successfully    |
+| Blockchain     | ⚠️ Mock Mode   | Ready for Mumbai testnet  |
+| Frontend       | 🟡 Not Started | Needs to be started       |
 
 ---
 
@@ -24,12 +24,14 @@
 ### ✅ Certificate Issuance Test
 
 **Test Certificate Issued:**
+
 - **Learner:** Alice Johnson
 - **Course:** Smart Contract Development
 - **Institute:** Blockchain University
 - **Date:** October 2, 2025
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -53,12 +55,14 @@
 ## ✅ What's Working
 
 ### 1. **PDF Generation** ✅
+
 - Certificate PDF created successfully
 - Size: 5.6 KB
 - Beautiful design with QR code
 - Stored locally in `/server/certificates/`
 
 ### 2. **IPFS Upload** ✅
+
 - Certificate uploaded to Pinata successfully
 - IPFS Hash: `bafkreig27f4d4hw5rcwq6uvjvy7yn5qtfjk7eivyd7qaxqxi5atmqvl34e`
 - **Accessible at:**
@@ -67,16 +71,19 @@
 - **Status:** HTTP 200 ✅ (Certificate is live on IPFS!)
 
 ### 3. **Database Storage** ✅
+
 - Certificate data saved to SQLite
 - IPFS hash stored correctly
 - All fields populated
 
 ### 4. **QR Code** ✅
+
 - QR code generated
 - Contains verification URL
 - Embedded in PDF
 
 ### 5. **Certificate Hash** ✅
+
 - SHA-256 hash generated
 - Unique identifier created
 - Ready for blockchain storage
@@ -88,16 +95,19 @@
 ### View Your Certificate on IPFS:
 
 **Pinata Gateway (Fast):**
+
 ```
 https://gateway.pinata.cloud/ipfs/bafkreig27f4d4hw5rcwq6uvjvy7yn5qtfjk7eivyd7qaxqxi5atmqvl34e
 ```
 
 **Public IPFS Gateway:**
+
 ```
 https://ipfs.io/ipfs/bafkreig27f4d4hw5rcwq6uvjvy7yn5qtfjk7eivyd7qaxqxi5atmqvl34e
 ```
 
 **Verification URL:**
+
 ```
 http://localhost:3000/verify/0c31abb5-aee3-4cd4-b658-9d1a3a94e09f
 ```
@@ -107,11 +117,12 @@ http://localhost:3000/verify/0c31abb5-aee3-4cd4-b658-9d1a3a94e09f
 ## 📊 Database Check
 
 ```sql
-SELECT id, learner_name, course_name, ipfs_hash 
+SELECT id, learner_name, course_name, ipfs_hash
 FROM certificates;
 ```
 
 **Result:**
+
 ```
 0c31abb5-aee3-4cd4-b658-9d1a3a94e09f | Alice Johnson | Smart Contract Development | bafkreig27f4d4hw5rcwq6uvjvy7yn5qtfjk7eivyd7qaxqxi5atmqvl34e
 ```
@@ -157,22 +168,28 @@ FRONTEND_URL=http://localhost:3000           ✅ Configured
 ## 🎯 What You Can Do Now
 
 ### 1. **View Certificate on IPFS** ✅
+
 Click this link to see your certificate on IPFS:
 https://gateway.pinata.cloud/ipfs/bafkreig27f4d4hw5rcwq6uvjvy7yn5qtfjk7eivyd7qaxqxi5atmqvl34e
 
 ### 2. **Check Pinata Dashboard** ✅
+
 Go to: https://app.pinata.cloud/pinmanager
+
 - You'll see your uploaded certificate
 - View metadata and stats
 
 ### 3. **Start Frontend** 🟡
+
 ```bash
 cd /Users/surajbayas/Developer/Certify/client
 npm start
 ```
 
 ### 4. **Issue More Certificates** ✅
+
 API is ready to issue more certificates:
+
 ```bash
 curl -X POST http://localhost:5001/api/certificates/issue \
   -H "Content-Type: application/json" \
@@ -190,7 +207,9 @@ curl -X POST http://localhost:5001/api/certificates/issue \
 ## 🚀 Next Steps (Optional)
 
 ### Add Blockchain (15 minutes)
+
 Follow `BLOCKCHAIN_SETUP.md` to:
+
 1. Deploy smart contract to Polygon Mumbai
 2. Store certificate hashes on blockchain
 3. Enable true decentralized verification
@@ -202,25 +221,25 @@ Follow `BLOCKCHAIN_SETUP.md` to:
 
 ## 📈 Performance Metrics
 
-| Metric | Value | Status |
-|--------|-------|--------|
-| Certificate Generation Time | ~200ms | ✅ Fast |
-| IPFS Upload Time | ~8s | ✅ Normal |
-| PDF Size | 5.6 KB | ✅ Small |
-| API Response Time | <1s | ✅ Fast |
-| Database Query Time | <10ms | ✅ Fast |
+| Metric                      | Value  | Status    |
+| --------------------------- | ------ | --------- |
+| Certificate Generation Time | ~200ms | ✅ Fast   |
+| IPFS Upload Time            | ~8s    | ✅ Normal |
+| PDF Size                    | 5.6 KB | ✅ Small  |
+| API Response Time           | <1s    | ✅ Fast   |
+| Database Query Time         | <10ms  | ✅ Fast   |
 
 ---
 
 ## 🔐 Security Check
 
-| Item | Status |
-|------|--------|
-| API Keys in .env | ✅ Secured |
-| .env in .gitignore | ✅ Protected |
-| Private keys | ⚠️ Not set (mock mode) |
-| HTTPS | ⚠️ Development only |
-| Input validation | ✅ Working |
+| Item               | Status                 |
+| ------------------ | ---------------------- |
+| API Keys in .env   | ✅ Secured             |
+| .env in .gitignore | ✅ Protected           |
+| Private keys       | ⚠️ Not set (mock mode) |
+| HTTPS              | ⚠️ Development only    |
+| Input validation   | ✅ Working             |
 
 ---
 
@@ -244,6 +263,7 @@ Your certificate platform is fully operational with:
 ## 🎯 Try It Now!
 
 1. **Start Frontend:**
+
    ```bash
    cd /Users/surajbayas/Developer/Certify/client
    npm start
@@ -253,6 +273,7 @@ Your certificate platform is fully operational with:
    http://localhost:3000
 
 3. **Issue Certificate:**
+
    - Click "Issue Certificate"
    - Fill in details
    - Get IPFS link instantly!
@@ -276,6 +297,7 @@ Your certificate platform is fully operational with:
 ## 🆘 Support
 
 If you need help:
+
 1. Check server logs: `cat /Users/surajbayas/Developer/Certify/server/server.log`
 2. Review documentation files
 3. Test API with curl commands

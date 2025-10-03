@@ -17,12 +17,14 @@ Complete guide to deploy your certificate platform on Polygon Mumbai Testnet (10
 ### Step 1: Set Up MetaMask Wallet
 
 #### 1.1 Install MetaMask
+
 - Go to https://metamask.io/download/
 - Install the browser extension
 - Create a new wallet (or import existing one)
 - **IMPORTANT:** Save your secret recovery phrase in a safe place!
 
 #### 1.2 Add Polygon Mumbai Testnet to MetaMask
+
 1. Open MetaMask
 2. Click the network dropdown (top center)
 3. Click "Add Network" or "Add Network Manually"
@@ -46,6 +48,7 @@ Block Explorer: https://mumbai.polygonscan.com/
 You need testnet MATIC to deploy the contract and store certificates.
 
 #### 2.1 Copy Your Wallet Address
+
 1. Open MetaMask
 2. Click on your account name at the top
 3. Your address will be copied (starts with 0x...)
@@ -55,6 +58,7 @@ You need testnet MATIC to deploy the contract and store certificates.
 Visit these faucets (try multiple if one is slow):
 
 **Option 1: Polygon Faucet**
+
 - Go to: https://faucet.polygon.technology/
 - Select "Mumbai"
 - Paste your wallet address
@@ -62,17 +66,20 @@ Visit these faucets (try multiple if one is slow):
 - Wait 1-2 minutes
 
 **Option 2: Alchemy Faucet**
+
 - Go to: https://mumbaifaucet.com/
 - Paste your wallet address
 - Complete captcha
 - Click "Send Me MATIC"
 
 **Option 3: QuickNode Faucet**
+
 - Go to: https://faucet.quicknode.com/polygon/mumbai
 - Connect wallet or paste address
 - Request tokens
 
 #### 2.3 Verify You Received MATIC
+
 - Check MetaMask - you should see ~0.5-2 MATIC
 - This is enough for thousands of transactions!
 
@@ -81,11 +88,13 @@ Visit these faucets (try multiple if one is slow):
 ### Step 3: Export Your Private Key
 
 **⚠️ SECURITY WARNING:**
+
 - Only use this wallet for TESTNET
 - Never share your private key
 - Never use this key on mainnet with real money
 
 #### 3.1 Get Your Private Key
+
 1. Open MetaMask
 2. Click the 3 dots menu (top right)
 3. Click "Account Details"
@@ -106,6 +115,7 @@ npx hardhat init
 ```
 
 When prompted:
+
 - Choose: "Create a JavaScript project"
 - Press Enter for all defaults
 
@@ -130,6 +140,7 @@ BLOCKCHAIN_RPC_URL=https://rpc-mumbai.maticvigil.com
 ```
 
 **Example:**
+
 ```bash
 PRIVATE_KEY=abc123def456...your64characterkey
 BLOCKCHAIN_RPC_URL=https://rpc-mumbai.maticvigil.com
@@ -151,6 +162,7 @@ npx hardhat run scripts/deploy.js --network mumbai
 #### 6.2 Save the Contract Address
 
 The output will show:
+
 ```
 CertificateRegistry deployed to: 0x1234567890abcdef...
 ```
@@ -190,12 +202,14 @@ npm start
 ### Step 8: Test Your Setup! 🎉
 
 #### 8.1 Issue a Test Certificate
+
 1. Go to http://localhost:3000
 2. Click "Issue Certificate"
 3. Fill in the details
 4. Click "Issue Certificate"
 
 #### 8.2 Check Blockchain Confirmation
+
 - You should see "Transaction Hash: 0x..." in the response
 - Copy the transaction hash
 - Visit: https://mumbai.polygonscan.com/
@@ -203,6 +217,7 @@ npm start
 - You'll see your certificate hash on the blockchain!
 
 #### 8.3 Verify the Certificate
+
 1. Use the QR code or enter the certificate ID
 2. Click "Verify"
 3. It will check the blockchain and show ✅ Valid!
@@ -214,6 +229,7 @@ npm start
 Your certificate platform is now running on Polygon Mumbai Testnet!
 
 ### What you can do now:
+
 - Issue unlimited certificates (free!)
 - Verify certificates on blockchain
 - Generate QR codes
@@ -224,17 +240,20 @@ Your certificate platform is now running on Polygon Mumbai Testnet!
 ## 📊 Monitoring Your Blockchain Activity
 
 ### Check Your Wallet
+
 - Open MetaMask
 - See your MATIC balance decrease slightly with each transaction
 - Each transaction costs ~0.001-0.01 MATIC
 
 ### View on Block Explorer
+
 - Visit: https://mumbai.polygonscan.com/
 - Paste your wallet address
 - See all your transactions
 - View your smart contract
 
 ### Check Contract on PolygonScan
+
 - Go to: https://mumbai.polygonscan.com/address/YOUR_CONTRACT_ADDRESS
 - See all certificates stored
 - View transaction history
@@ -244,19 +263,23 @@ Your certificate platform is now running on Polygon Mumbai Testnet!
 ## 🆘 Troubleshooting
 
 ### "Insufficient funds for gas"
+
 - Get more testnet MATIC from faucets
 - You might need to wait 24 hours between requests
 
 ### "Invalid private key"
+
 - Make sure you copied the full key
 - Remove any "0x" prefix
 - Check for extra spaces
 
 ### "Contract not deployed"
+
 - Verify contract address in .env
 - Check it exists on mumbai.polygonscan.com
 
 ### "Transaction taking too long"
+
 - Mumbai testnet can be slow sometimes
 - Wait 1-2 minutes
 - Check transaction on PolygonScan
@@ -266,11 +289,13 @@ Your certificate platform is now running on Polygon Mumbai Testnet!
 ## 🔐 Security Reminders
 
 ✅ DO:
+
 - Use separate wallet for testnet
 - Keep private key in .env file (never commit to git!)
 - Use this only for testing
 
 ❌ DON'T:
+
 - Share your private key
 - Use this wallet on mainnet
 - Commit .env to version control
@@ -280,14 +305,14 @@ Your certificate platform is now running on Polygon Mumbai Testnet!
 
 ## 💰 Cost Breakdown (All FREE!)
 
-| Action | Cost |
-|--------|------|
-| Creating wallet | FREE |
-| Getting testnet MATIC | FREE |
-| Deploying contract | FREE (uses testnet MATIC) |
-| Issuing certificates | FREE (uses testnet MATIC) |
-| Verifying certificates | FREE (read-only) |
-| Total | $0.00 |
+| Action                 | Cost                      |
+| ---------------------- | ------------------------- |
+| Creating wallet        | FREE                      |
+| Getting testnet MATIC  | FREE                      |
+| Deploying contract     | FREE (uses testnet MATIC) |
+| Issuing certificates   | FREE (uses testnet MATIC) |
+| Verifying certificates | FREE (read-only)          |
+| Total                  | $0.00                     |
 
 ---
 
@@ -296,11 +321,13 @@ Your certificate platform is now running on Polygon Mumbai Testnet!
 Once you're happy with testing on Mumbai:
 
 1. **Production Deployment:**
+
    - Deploy to Polygon Mainnet
    - Get real MATIC from exchange
    - Costs ~$0.01 per transaction
 
 2. **Enhancements:**
+
    - Add batch certificate issuance
    - Add certificate revocation
    - Add multi-signature approval
@@ -326,6 +353,7 @@ Once you're happy with testing on Mumbai:
 ## ❓ Need Help?
 
 If you run into issues:
+
 1. Check the error message carefully
 2. Verify all addresses and keys
 3. Check if you have enough testnet MATIC
